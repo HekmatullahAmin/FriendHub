@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.hekmatullahamin.friendhub.model.Post" />
+
+        <variable
+            name="currentUserId"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/postMarginTop"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/postUserProfilePicture"
+                loadProfileImage="@{post.user.userProfile}"
+                android:layout_width="@dimen/postUserProfileWidthAndHeight"
+                android:layout_height="@dimen/postUserProfileWidthAndHeight"
+                android:layout_marginEnd="@dimen/viewsMarginRight" />
+
+            <TextView
+                android:id="@+id/postUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@{post.user.userName}"
+                tools:text="Hekmatullah" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/viewsMarginTop"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/postUserPostImageHeight"
+                app:cardCornerRadius="@dimen/viewCornerRadius">
+
+                <ImageView
+                    android:id="@+id/postImageView"
+                    loadImage="@{post.postImage}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/viewsMarginTop"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/likedByLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/viewsMarginRight"
+                android:text="@string/liked_by_label" />
+
+            <TextView
+                android:id="@+id/likesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/likedByLabel"
+                android:text="@{String.valueOf(post.postLikesCount)}"
+                tools:text="109" />
+
+            <TextView
+                android:id="@+id/commentsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/viewsMarginRight"
+                android:layout_toStartOf="@id/commentsLabel"
+                android:text="@{String.valueOf(post.postCommentsCount)}"
+                tools:text="20" />
+
+            <TextView
+                android:id="@+id/commentsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/comments_label" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/postCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/viewsMarginTop"
+            android:text="@{post.postCaption}"
+            tools:text="This is about post" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/horizontalLineWidth"
+            android:src="@drawable/custom_horizontal_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--            app:icon="@drawable/like"-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/likeBtn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                currentUserId="@{currentUserId}"
+                likedUserIdsList="@{post.likedUserIdsList}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/like_post_button_text"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/commentBtn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/comment_post_button_text"
+                app:icon="@drawable/comment"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    whole application-->
+    <dimen name="viewsMarginTop">10dp</dimen>
+    <dimen name="viewsMarginRight">5dp</dimen>
+    <dimen name="layoutPadding">50dp</dimen>
+    <dimen name="profilePictureWidthAndHeight">150dp</dimen>
+    <dimen name="recyclerViewPadding">2dp</dimen>
+    <dimen name="viewCornerRadius">5dp</dimen>
+    <dimen name="gadgetsPadding">3dp</dimen>
+    <dimen name="toolbarTextViewSize">18sp</dimen>
+    <dimen name="horizontalLineWidth">3dp</dimen>
+    <dimen name="profilePictureEndImageWidthAndHeight">40dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+
+    <!--    specific for authentication activity dimens-->
+    <dimen name="authenticationActivityBoxToLabelMarginTop">40dp</dimen>
+    <dimen name="textViewMarginRight">5dp</dimen>
+
+    <!--    edit fragment dimens-->
+    <dimen name="cardElevation">1dp</dimen>
+    <dimen name="screenPadding">15dp</dimen>
+
+    <!--    Progress bar width and height-->
+    <dimen name="progressDialogPadding">10dp</dimen>
+    <dimen name="progressBarWidthAndHeight">50dp</dimen>
+
+    <!--    Profile Fragment -->
+    <dimen name="profileUserNameSize">30sp</dimen>
+    <dimen name="profileUserBioSize">18sp</dimen>
+    <dimen name="profileUserUnderLabelTextSize">18sp</dimen>
+
+    <!--    add post fragment-->
+    <dimen name="addPostImageWidthAndHeight">100dp</dimen>
+    <dimen name="addPostLayoutPadding">20dp</dimen>
+
+    <!--    custom post row-->
+    <dimen name="postUserProfileWidthAndHeight">60dp</dimen>
+    <dimen name="postUserPostImageHeight">200dp</dimen>
+    <dimen name="postMarginTop">20dp</dimen>
+
+    <!--    comment botton sheet dialog-->
+    <dimen name="comments_card_view_padding">10dp</dimen>
+
+    <!--    comment row layout-->
+    <dimen name="commentProfilePictureWidthAndHeight">40dp</dimen>
+    <dimen name="comment_layout_padding">5dp</dimen>
+
+    <!--    custom current user posts row-->
+    <dimen name="imageHeight">150dp</dimen>
+    <dimen name="cardMargin">2dp</dimen>
+
+    <!--    find friend activity-->
+    <dimen name="search_people_corner_radius">20dp</dimen>
+    <dimen name="find_friend_toolbar_padding">5dp</dimen>
+</resources>

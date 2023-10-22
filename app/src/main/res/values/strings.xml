@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">FriendHub</string>
+
+    // Sign up and Sing in fragment
+    <string name="sign_up_label_text_view">Sign Up</string>
+    <string name="user_name_hint">Enter your name</string>
+    <string name="user_email_hint">Enter your email</string>
+    <string name="already_have_account_label">Already have an account?</string>
+    <string name="user_password_hint">Enter your password</string>
+    <string name="user_confirm_password_hint">Re-enter your password</string>
+    <string name="sign_in_label_text_view">Login</string>
+    <string name="do_not_have_account_label">Don\'t have an account?</string>
+
+    <!--    SnackBar error messages-->
+    <string name="enter_name_error_message">Please enter your name.</string>
+    <string name="enter_email_error_message">Please enter your email.</string>
+    <string name="enter_password_error_message">Please enter your password.</string>
+    <string name="enter_confirm_password_error_message">Please enter your password to confirm</string>
+    <string name="password_not_match_error">Password not matched.</string>
+    <string name="no_caption_match_error">Write a caption.</string>
+
+    <!--    edit profile strings-->
+    <string name="cancel_button">Cancel</string>
+    <!--    it is also used in profile fragment as button text-->
+    <string name="edit_profile_toolbar_title">Edit Profile</string>
+    <string name="done_button">Done</string>
+    <string name="user_name_label">Name</string>
+    <string name="user_bio_label">Bio</string>
+    <string name="user_bio_hint">Enter your bio</string>
+
+    <!--    progress bar default message-->
+    <string name="progress_bar_text">Please wait</string>
+    <string name="progress_bar_updating">Updating…</string>
+    <string name="account_creation_failed">Failed to create account</string>
+    <string name="progress_bar_loading">Loading…</string>
+    <string name="progress_bar_uploading">Uploading…</string>
+
+    <!--    Toast messages-->
+    <string name="image_selection_failed">Image selection failed</string>
+    <!--    permission denied to access gallery-->
+    <string name="permission_denied">Permission denied</string>
+    <string name="user_update_failed">Update failed</string>
+    <string name="login_failed">Login failed</string>
+    <string name="comment_failed">Comment send failed</string>
+    <string name="no_comment_error">Please enter sth</string>
+
+    <!--    Profile fragment-->
+    <string name="follow">Follow</string>
+    <string name="userPostLabel">Posts</string>
+    <string name="userLikedPostLabel">Liked</string>
+    <string name="userFollowersLabel">Followers</string>
+    <string name="userFollowingLabel">Following</string>
+
+    <!--    hub bottom navigation title strings-->
+    <string name="buttom_navigation_menu_home">Home</string>
+    <string name="buttom_navigation_menu_add_post">Add Post</string>
+    <string name="buttom_navigation_menu_profile">Profile</string>
+
+    <!--    add post fragment-->
+    <string name="add_post_toolbar_title">New Post</string>
+    <string name="share_button">Share</string>
+    <string name="post_caption_hint">Write a caption…</string>
+    <string name="upload_failed">Upload failed</string>
+
+    <!--    custom post row layout-->
+    <string name="liked_by_label">Liked by</string>
+    <string name="comments_label">comments</string>
+    <string name="like_post_button_text">Like</string>
+    <string name="comment_post_button_text">Comment</string>
+    <string name="user_fecthed_failed">Failed to fetch user</string>
+
+    <!--    comment bottom sheet dialog-->
+    <string name="bottom_sheet_dialog_title">Comments</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="home_menu_friends">Friends</string>
+
+    <!--    home menu -->
+    <string name="home_menu_messenger">Messenger</string>
+    <!--    friends activity-->
+    <string name="friends">Friends</string>
+    <!--    find friend activity-->
+    <string name="search_people">Search people</string>
+
+</resources>

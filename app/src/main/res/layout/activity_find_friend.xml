@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.hekmatullahamin.friendhub.activities.FindFriendActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.hekmatullahamin.friendhub.viewmodels.FindFriendViewModel" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.FindFriendActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/findFriendToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/find_friend_toolbar_padding"
+            app:titleTextColor="@color/black">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/viewsMarginRight"
+                android:onClick="@{()->activity.goToFriendRequestsScreen()}"
+                android:src="@drawable/back" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/searchPersonET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/viewsMarginRight"
+                    android:background="@drawable/custom_search_people_background"
+                    android:hint="@string/search_people" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/personsRecyclerView"
+            personRecyclerViewData="@{viewModel.allFilteredUsers}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/recyclerViewPadding"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/custom_person_row_layout" />
+    </LinearLayout>
+</layout>

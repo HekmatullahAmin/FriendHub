@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "791301511022",
+    "project_id": "friendhub-2c2b7",
+    "storage_bucket": "friendhub-2c2b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791301511022:android:5a51e6d8564af12154d37f",
+        "android_client_info": {
+          "package_name": "com.hekmatullahamin.friendhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW4eQKlbmKU3UMND_-07RsvAB_3AJcas8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

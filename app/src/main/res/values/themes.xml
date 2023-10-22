@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FriendHub" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Light Theme Colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="android:textColorPrimary">@color/colorOnPrimary</item>
+        <item name="android:textColorSecondary">@color/colorOnSecondary</item>
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textColorTertiary">@color/colorOnSurface</item>
+    </style>
+
+    <style name="Theme.FriendHub" parent="Base.Theme.FriendHub" />
+
+    <!--    TODO make the status bar disappear-->
+    <!--    TODO make the edit texts color only OnBackground and remove entered by me-->
+    <!--    <style name="TransparentStatusBar" parent="Theme.FriendHub">-->
+    <!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+    <!--    </style>-->
+</resources>

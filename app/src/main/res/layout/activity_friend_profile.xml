@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.hekmatullahamin.friendhub.model.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/layoutPadding"
+        tools:context=".activities.FriendProfileActivity">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture"
+            loadProfileImage="@{user.userProfile}"
+            android:layout_width="@dimen/profilePictureWidthAndHeight"
+            android:layout_height="@dimen/profilePictureWidthAndHeight"
+            android:src="@drawable/profile_placeholder" />
+
+        <TextView
+            android:id="@+id/userNameTV"
+            android:text="@{user.userName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/viewsMarginTop"
+            android:textSize="@dimen/profileUserNameSize"
+            android:textStyle="bold"
+            tools:text="Username" />
+
+        <TextView
+            android:id="@+id/userBioTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/viewsMarginTop"
+            android:text="@{user.userBio}"
+            android:gravity="center"
+            android:textSize="@dimen/profileUserBioSize"
+            tools:text="This is about the user. A little discription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/viewsMarginTop"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:gravity="center"
+                    android:text="@string/userPostLabel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/userFollowersLabel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/userFollowingLabel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userPostsCount"
+                    android:layout_width="wrap_content"
+                    android:text="@{String.valueOf(user.postsCount)}"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/profileUserUnderLabelTextSize"
+                    android:textStyle="bold"
+                    tools:text="25" />
+
+                <TextView
+                    android:text="@{String.valueOf(user.followersCount)}"
+                    android:id="@+id/userFollowersCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/profileUserUnderLabelTextSize"
+                    android:textStyle="bold"
+                    tools:text="20K" />
+
+                <TextView
+                    android:id="@+id/userFollowingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(user.followingCount)}"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/profileUserUnderLabelTextSize"
+                    android:textStyle="bold"
+                    tools:text="203" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/followUserButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/viewsMarginTop"
+            android:text="@string/follow" />
+    </LinearLayout>
+</layout>
